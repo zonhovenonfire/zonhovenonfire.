@@ -13,7 +13,7 @@
   .subtitle { font-size: 1.3rem; color: #ffcc00; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
   .countdown-container { background: rgba(255, 140, 0, 0.1); border: 2px dashed var(--fire-orange); padding: 20px; border-radius: 20px; text-align: center; margin: 30px 0; }
   #countdown { font-size: 1.8rem; font-weight: bold; color: #ffcc00; }
-  .card { background: var(--card-bg); padding: 30px; border-radius: 24 : 24px; margin-bottom: 30px; border: 1px solid #333; transition: 0.3s; }
+  .card { background: var(--card-bg); padding: 30px; border-radius: 24px; margin-bottom: 30px; border: 1px solid #333; transition: 0.3s; }
   .card:hover { border-color: var(--fire-orange); transform: translateY(-5px); }
   h2 { color: var(--fire-orange); margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
   a { color: var(--fire-orange); text-decoration: none; font-weight: bold; }
@@ -21,7 +21,7 @@
   .btn-primary { background: linear-gradient(45deg, #ff8c00, #ff4500); border: none; padding: 18px; border-radius: 50px; color: white; font-weight: 900; cursor: pointer; width: 100%; text-transform: uppercase; transition: 0.3s; }
   input, textarea, select { width: 100%; padding: 15px; margin: 10px 0 20px; border-radius: 15px; border: 1px solid #444; background: #222; color: white; box-sizing: border-box; }
   #side-dish-extra { display: none; padding: 15px; background: #222; border-radius: 15px; margin-bottom: 20px; border: 1px solid var(--fire-orange); }
-  .fb-btn { background: #1877F2; color: white !important; padding: 15px; border-radius: 50px; display: block; text-align: center; margin-top: 10px; }
+  .fb-btn { background: #1877F2; color: white !important; padding: 15px; border-radius: 50px; display: block; text-align: center; margin-top: 10px; font-weight: bold; }
   iframe { width: 100%; border-radius: 12px; border: 0; }
   .center { text-align: center; }
 </style>
@@ -48,45 +48,56 @@
   </div>
 
   <div class="card">
-    <h2>🥩 Sponsors</h2>
+    <h2>🥩 Sponsors & Producten</h2>
     <div class="score-item"><span>🐟 Zalm</span> <a href="https://www.zalmvanurk.nl" target="_blank">Zalm van Urk</a></div>
     <div class="score-item"><span>🥩 Vlees</span> <a href="https://www.farmbeefboutique.be" target="_blank">Farm Beef Boutique</a></div>
     <div class="score-item"><span>🏆 Prijzen</span> <a href="https://www.kamadobbq.be" target="_blank">Kamado BBQ</a></div>
   </div>
 
   <div class="card">
-    <h2>⏰ Timing</h2>
-    <div class="score-item"><span>13:00</span> <strong>Zalm</strong></div>
-    <div class="score-item"><span>14:00</span> <strong>Entrecote</strong></div>
-    <div class="score-item"><span>15:00</span> <strong>Buikspek</strong></div>
-    <div class="score-item"><span>16:00</span> <strong>Dessert</strong></div>
+    <h2>⏰ Timing (Indicatief)</h2>
+    <div class="score-item"><span>13:00 - 13:15</span> <strong>Inleveren: Zalm</strong></div>
+    <div class="score-item"><span>14:00 - 14:15</span> <strong>Inleveren: Entrecote</strong></div>
+    <div class="score-item"><span>15:00 - 15:15</span> <strong>Inleveren: Buikspek</strong></div>
+    <div class="score-item"><span>16:00 - 16:15</span> <strong>Inleveren: Dessert (n.t.b.)</strong></div>
+    <div class="score-item"><span>17:00</span> <strong>Prijsuitreiking & Afbraak</strong></div>
   </div>
 
   <div class="card">
     <h2>📝 Inschrijven</h2>
-    <button class="btn-primary" style="background: #444; margin-bottom: 20px;" onclick="window.open('Zonhoven.pdf')">📄 Download Reglement</button>
+    <p>€175 per team + €100 waarborg. Max. 8 personen per team.</p>
+    <button class="btn-primary" style="background: #444; margin-bottom: 20px;" onclick="window.open('Zonhoven.pdf')">📄 Download Reglement (PDF)</button>
     <form name="inschrijving" method="POST" data-netlify="true">
-      <input type="text" name="Teamnaam" placeholder="Teamnaam" required>
-      <input type="email" name="Email" placeholder="E-mail" required>
+      <input type="text" name="Teamnaam" placeholder="Naam van je team" required>
+      <input type="text" name="Verantwoordelijke" placeholder="Naam contactpersoon" required>
+      <input type="email" name="Email" placeholder="E-mailadres" required>
+      <input type="text" name="Telefoon" placeholder="Telefoonnummer" required>
+      
+      <label>Maken jullie een side dish?</label>
       <select name="Side dish" id="side-dish-select" onchange="checkSideDish()">
-        <option value="Nee">Geen side dish</option>
-        <option value="Ja">Ja, ik maak een side dish</option>
+        <option value="Nee">Nee</option>
+        <option value="Ja">Ja</option>
       </select>
+
       <div id="side-dish-extra">
-        <input type="text" name="Welke side dish" placeholder="Wat gaan jullie maken?">
+        <input type="text" name="Welke side dish" placeholder="Wat voor bijgerecht gaan jullie maken?">
       </div>
-      <button type="submit" class="btn-primary">Verstuur 🔥</button>
+      
+      <textarea name="Extra info" placeholder="Vragen of info voor de organisatie..."></textarea>
+      <button type="submit" class="btn-primary">Verstuur Inschrijving 🔥</button>
     </form>
+    <p class="center">Betaling: <strong>BE67 7370 5834 0287</strong> (A. Haesen)</p>
   </div>
 
   <div class="card center">
-    <h2>Volg ons</h2>
-    <a href="https://www.facebook.com" target="_blank" class="fb-btn">👍 Facebook Pagina</a>
+    <h2>Volg de actie!</h2>
+    <a href="https://www.facebook.com" target="_blank" class="fb-btn">👍 Bekijk Zonhoven On Fire op Facebook</a>
   </div>
 
   <div class="card">
-    <h2>📍 Locatie</h2>
-    <iframe src="https://www.google.com" height="350" allowfullscreen="" loading="lazy"></iframe>
+    <h2>📍 Waar moet je zijn?</h2>
+    <p>Kerkplein 8, 3520 Zonhoven</p>
+    <iframe src="https://www.google.com" height="350" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
   </div>
 </div>
 
