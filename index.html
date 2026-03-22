@@ -202,22 +202,33 @@
     <p class="center">Betaling: <strong>BE67 7370 5834 0287</strong> (A. Haesen)</p>
   </div>
 
-      <div class="card center">
-    <a href="https://www.facebook.com" target="_blank" class="fb-btn">👍 Volg ons op Facebook</a>
+      <!-- Facebook Sectie -->
+  <div class="card center">
+    <h2>Volg de actie!</h2>
+    <p>Blijf op de hoogte via onze Facebookpagina:</p>
+    <a href="https://www.facebook.com" target="_blank" class="fb-btn">
+      👍 Bekijk Zonhoven On Fire op Facebook
+    </a>
   </div>
 
+  <!-- Locatie Sectie -->
   <div class="card">
-    <h2>📍 Locatie</h2>
+    <h2>📍 Waar moet je zijn?</h2>
     <p>Kerkplein 8, 3520 Zonhoven</p>
-    <iframe src="https://www.google.com" width="100%" height="350" style="border:0; border-radius: 12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div style="width: 100%; overflow: hidden; border-radius: 12px;">
+      <iframe 
+        src="https://www.google.com" 
+        width="100%" 
+        height="350" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      <p>Je browser ondersteunt geen kaarten. <a href="https://maps.app.goo.gl" target="_blank">Klik hier voor de locatie op Google Maps.</a></p>
+      </iframe>
+    </div>
   </div>
 
-<script>
-  // Laat extra veld zien als Ja is geselecteerd
-  function checkSideDish() {
-    var select = document.getElementById("side-dish-select");
-    var extra = document.getElementById("side-dish-extra");
-    extra.style.display = (select.value === "Ja") ? "block" : "none";
   }
 
   // Countdown
