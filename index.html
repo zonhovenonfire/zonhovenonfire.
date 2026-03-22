@@ -4,121 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zonhoven On Fire 🔥 BBQ Contest</title>
-
 <style>
-  :root {
-    --fire-orange: #ff8c00;
-    --dark-bg: #0d0d0d;
-    --card-bg: #1a1a1a;
-  }
-
-  body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: var(--dark-bg);
-    color: #eee;
-    line-height: 1.6;
-    background-image: radial-gradient(circle at top, #2c1a05 0%, #0d0d0d 100%);
-  }
-
+  :root { --fire-orange: #ff8c00; --dark-bg: #0d0d0d; --card-bg: #1a1a1a; }
+  body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--dark-bg); color: #eee; line-height: 1.6; background-image: radial-gradient(circle at top, #2c1a05 0%, #0d0d0d 100%); }
   .container { max-width: 850px; margin: auto; padding: 20px; }
-
   header { text-align: center; padding: 30px 0; }
-  
-  /* Logo styling */
-  .logo-img {
-    max-width: 100%;
-    height: auto;
-    width: 450px; /* Pas dit aan naar wens */
-    filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.4));
-    margin-bottom: 10px;
-  }
-
+  .logo-img { max-width: 100%; height: auto; width: 450px; filter: drop-shadow(0 0 20px rgba(255, 140, 0, 0.4)); margin-bottom: 10px; }
   .subtitle { font-size: 1.3rem; color: #ffcc00; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
-
-  .countdown-container {
-    background: rgba(255, 140, 0, 0.1);
-    border: 2px dashed var(--fire-orange);
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-    margin: 30px 0;
-  }
-
+  .countdown-container { background: rgba(255, 140, 0, 0.1); border: 2px dashed var(--fire-orange); padding: 20px; border-radius: 20px; text-align: center; margin: 30px 0; }
   #countdown { font-size: 1.8rem; font-weight: bold; color: #ffcc00; }
-
-  .card {
-    background: var(--card-bg);
-    padding: 30px;
-    border-radius: 24px;
-    margin-bottom: 30px;
-    border: 1px solid #333;
-    transition: 0.3s;
-  }
-
+  .card { background: var(--card-bg); padding: 30px; border-radius: 24 : 24px; margin-bottom: 30px; border: 1px solid #333; transition: 0.3s; }
   .card:hover { border-color: var(--fire-orange); transform: translateY(-5px); }
-
   h2 { color: var(--fire-orange); margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
-
   a { color: var(--fire-orange); text-decoration: none; font-weight: bold; }
-
-  .score-item {
-    display: flex;
-    justify-content: space-between;
-    background: #252525;
-    margin-bottom: 8px;
-    padding: 12px 20px;
-    border-radius: 12px;
-  }
-
-  .btn-primary {
-    background: linear-gradient(45deg, #ff8c00, #ff4500);
-    border: none;
-    padding: 18px;
-    border-radius: 50px;
-    color: white;
-    font-weight: 900;
-    cursor: pointer;
-    width: 100%;
-    text-transform: uppercase;
-    transition: 0.3s;
-  }
-
-  .btn-primary:hover { transform: scale(1.02); filter: brightness(1.1); }
-
-  input, textarea, select {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0 20px;
-    border-radius: 15px;
-    border: 1px solid #444;
-    background: #222;
-    color: white;
-    box-sizing: border-box;
-  }
-
-  /* Verberg het extra veld standaard */
+  .score-item { display: flex; justify-content: space-between; background: #252525; margin-bottom: 8px; padding: 12px 20px; border-radius: 12px; }
+  .btn-primary { background: linear-gradient(45deg, #ff8c00, #ff4500); border: none; padding: 18px; border-radius: 50px; color: white; font-weight: 900; cursor: pointer; width: 100%; text-transform: uppercase; transition: 0.3s; }
+  input, textarea, select { width: 100%; padding: 15px; margin: 10px 0 20px; border-radius: 15px; border: 1px solid #444; background: #222; color: white; box-sizing: border-box; }
   #side-dish-extra { display: none; padding: 15px; background: #222; border-radius: 15px; margin-bottom: 20px; border: 1px solid var(--fire-orange); }
-
   .fb-btn { background: #1877F2; color: white !important; padding: 15px; border-radius: 50px; display: block; text-align: center; margin-top: 10px; }
-  
-  iframe { width: 100%; border-radius: 12px; border: 0; margin-top: 15px; }
+  iframe { width: 100%; border-radius: 12px; border: 0; }
+  .center { text-align: center; }
 </style>
 </head>
-
 <body>
-
 <div class="container">
-
   <header>
-    <!-- Zorg dat je logo-bestand 'logo.jpg' heet en in hetzelfde mapje staat -->
     <img src="logo.jpg" alt="Zonhoven On Fire Logo" class="logo-img">
     <div class="subtitle">BBQ Event | 20 September 2026</div>
     <p>Kerkplein 8, Zonhoven | <strong>Max. 18 teams</strong></p>
   </header>
 
   <div class="countdown-container">
-    <div id="countdown">Nog even geduld...</div>
+    <div id="countdown">Laden...</div>
   </div>
 
   <div class="card">
@@ -127,101 +44,58 @@
       <li>Bedwing de <strong>Rodeo Stier</strong></li>
       <li>Grootse <strong>Springkastelen</strong></li>
       <li>Messenslijper: <a href="https://www.goegeslepen.com" target="_blank">Goegeslepen</a></li>
-      <li>Diverse food- & drinkstanden</li>
     </ul>
   </div>
 
   <div class="card">
-    <h2>🥩 Categorieën & Sponsors</h2>
+    <h2>🥩 Sponsors</h2>
     <div class="score-item"><span>🐟 Zalm</span> <a href="https://www.zalmvanurk.nl" target="_blank">Zalm van Urk</a></div>
-    <div class="score-item"><span>🥩 Entrecote & Mergpijp</span> <a href="https://www.farmbeefboutique.be" target="_blank">Farm Beef Boutique</a></div>
-    <div class="score-item"><span>🐷 Buikspek</span> <a href="https://www.farmbeefboutique.be" target="_blank">Farm Beef Boutique</a></div>
-    <div class="score-item"><span>🍰 Dessert</span> <strong>Nog te bepalen</strong></div>
+    <div class="score-item"><span>🥩 Vlees</span> <a href="https://www.farmbeefboutique.be" target="_blank">Farm Beef Boutique</a></div>
+    <div class="score-item"><span>🏆 Prijzen</span> <a href="https://www.kamadobbq.be" target="_blank">Kamado BBQ</a></div>
   </div>
 
   <div class="card">
-    <h2>🏆 Prijzenpot</h2>
-    <p>Gesponsord door <a href="https://www.kamadobbq.be" target="_blank">Kamado BBQ</a>:</p>
-    <ul>
-      <li>🥇 <strong>1ste Prijs:</strong> OFYR 75 (€1295)</li>
-      <li>🥈 <strong>2de Prijs:</strong> Kamado Joe Classic I (€999)</li>
-      <li>🗳️ <strong>Publieksprijs:</strong> Gozney Arc Lite (€399)</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>⏰ Tijdschema</h2>
-    <p><strong>Opbouw:</strong> 19 sept (16u) of 20 sept (8u)</p>
-    <div class="score-item"><span>10:00</span> <strong>Briefing</strong></div>
-    <div class="score-item"><span>11:00</span> <strong>Start Wedstrijd</strong></div>
-    <div class="score-item"><span>13:00</span> <strong>Inleveren: Zalm</strong></div>
-    <div class="score-item"><span>14:00</span> <strong>Inleveren: Entrecote</strong></div>
-    <div class="score-item"><span>15:00</span> <strong>Inleveren: Buikspek</strong></div>
-    <div class="score-item"><span>16:00</span> <strong>Inleveren: Dessert</strong></div>
-    <div class="score-item"><span>17:00</span> <strong>Prijsuitreiking & Afbraak</strong></div>
-  </div>
-
-  <div class="card">
-    <h2>⚖️ Jurering (100 ptn)</h2>
-    <div class="score-item"><span>Grill- & Rooktechniek</span> <strong>25</strong></div>
-    <div class="score-item"><span>Smaak & Geheel</span> <strong>20</strong></div>
-    <div class="score-item"><span>Presentatie</span> <strong>20</strong></div>
-    <div class="score-item"><span>Verplichte Ingrediënten</span> <strong>20</strong></div>
-    <div class="score-item"><span>Side Dish</span> <strong>15</strong></div>
+    <h2>⏰ Timing</h2>
+    <div class="score-item"><span>13:00</span> <strong>Zalm</strong></div>
+    <div class="score-item"><span>14:00</span> <strong>Entrecote</strong></div>
+    <div class="score-item"><span>15:00</span> <strong>Buikspek</strong></div>
+    <div class="score-item"><span>16:00</span> <strong>Dessert</strong></div>
   </div>
 
   <div class="card">
     <h2>📝 Inschrijven</h2>
-    <p>€175 per team + €100 waarborg. Max. 8 personen.</p>
-    
-    <button class="btn-primary" style="background: #444; margin-bottom: 20px;" onclick="window.open('Zonhoven.pdf')">
-      📄 Download Reglement (PDF)
-    </button>
-
+    <button class="btn-primary" style="background: #444; margin-bottom: 20px;" onclick="window.open('Zonhoven.pdf')">📄 Download Reglement</button>
     <form name="inschrijving" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="inschrijving">
-      <input type="text" name="Teamnaam" placeholder="Naam van je team" required>
-      <input type="text" name="Verantwoordelijke" placeholder="Naam contactpersoon" required>
-      <input type="email" name="Email" placeholder="E-mailadres" required>
-      <input type="text" name="Telefoon" placeholder="Telefoonnummer" required>
-      
-      <label>Maken jullie een side dish?</label>
+      <input type="text" name="Teamnaam" placeholder="Teamnaam" required>
+      <input type="email" name="Email" placeholder="E-mail" required>
       <select name="Side dish" id="side-dish-select" onchange="checkSideDish()">
-        <option value="Nee">Nee</option>
-        <option value="Ja">Ja</option>
+        <option value="Nee">Geen side dish</option>
+        <option value="Ja">Ja, ik maak een side dish</option>
       </select>
-
       <div id="side-dish-extra">
-        <label>Welke side dish gaan jullie maken?</label>
-        <input type="text" name="Welke side dish" placeholder="Beschrijf kort je bijgerecht...">
+        <input type="text" name="Welke side dish" placeholder="Wat gaan jullie maken?">
       </div>
-      
-      <textarea name="Extra info" placeholder="Vragen voor de organisatie..."></textarea>
-      <button type="submit" class="btn-primary">Verstuur Inschrijving 🔥</button>
+      <button type="submit" class="btn-primary">Verstuur 🔥</button>
     </form>
-    <p class="center">Betaling: <strong>BE67 7370 5834 0287</strong> (A. Haesen)</p>
   </div>
 
   <div class="card center">
-    <a href="https://www.facebook.com" target="_blank" class="fb-btn">👍 Volg ons op Facebook</a>
+    <h2>Volg ons</h2>
+    <a href="https://www.facebook.com" target="_blank" class="fb-btn">👍 Facebook Pagina</a>
   </div>
 
   <div class="card">
     <h2>📍 Locatie</h2>
-    <iframe src="https://www.google.com" height="350"></iframe>
+    <iframe src="https://www.google.com" height="350" allowfullscreen="" loading="lazy"></iframe>
   </div>
-
 </div>
 
 <script>
-  // Laat extra veld zien als Ja is geselecteerd
   function checkSideDish() {
     var select = document.getElementById("side-dish-select");
     var extra = document.getElementById("side-dish-extra");
     extra.style.display = (select.value === "Ja") ? "block" : "none";
   }
-
-  // Countdown
   const eventDate = new Date("September 20, 2026 11:00:00").getTime();
   setInterval(function() {
     const now = new Date().getTime();
@@ -233,6 +107,5 @@
     document.getElementById("countdown").innerHTML = days + "d " + hours + "u " + minutes + "m " + seconds + "s";
   }, 1000);
 </script>
-
 </body>
 </html>
